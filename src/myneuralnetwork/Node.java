@@ -55,6 +55,7 @@ public class Node {
 
         }
         Log.info("calculated the value of node and set it to " + tmp);
+        Log.info("to do: add SIGMOID here");
         value = tmp;
 
     }
