@@ -13,9 +13,19 @@ import java.util.ArrayList;
  */
 public class InputNode extends Node{
     
- // call construcor of parent class
-    public InputNode(ArrayList nodeReference){          
-        super(nodeReference);
+    
+    /**
+     * call constructor of parent class
+     * this is not a good solution because we crate ArrayList objects for
+     * no reason
+     */
+
+    public InputNode(){          
+        super(new ArrayList());
     } 
+    
+    
+    
+    
     
 }

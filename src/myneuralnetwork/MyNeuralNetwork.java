@@ -32,7 +32,11 @@ public class MyNeuralNetwork {
             o.backward();
             h.backward();
             i.backward();
+            
+            // calculate error
 
+            
+            // update the weigths and set them to the new weights
             o.update();
             h.update();
             i.update();

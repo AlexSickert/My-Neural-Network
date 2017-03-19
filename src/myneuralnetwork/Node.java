@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Node {
     
-    ArrayList inputNodeReference;
+    private ArrayList inputNodeReference;
     
     public Node(ArrayList nodeReference){    
         inputNodeReference = nodeReference;        
