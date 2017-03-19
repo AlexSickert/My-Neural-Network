@@ -34,6 +34,8 @@ public class Node {
             weights.add(r);
 
         }
+        
+        Log.info("Node constructor called");  
 
     }
 

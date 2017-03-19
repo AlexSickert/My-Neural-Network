@@ -20,8 +20,9 @@ public class InputNode extends Node {
      * call constructor of parent class this is not a good solution because we
      * crate ArrayList objects for no reason
      */
-    public InputNode() {
+    public InputNode() {         
         super(new ArrayList());
+        Log.info("InputNode constructor called");         
     }
 
    
