@@ -13,13 +13,19 @@ import java.util.ArrayList;
  */
 public class HiddenLayer extends Layer {
 
-    ArrayList l;
+    ArrayList l; // list of nodes
+   
 
     public HiddenLayer(int nodes, ArrayList nodeReference) {
+        
+        Log.info("creating hidden layer");
 
         l = new ArrayList();
+        
+        
         for (int i = 0; i < nodes; i++) {
             l.add(new Node(nodeReference));
+            
         }
 
     }
@@ -29,11 +35,22 @@ public class HiddenLayer extends Layer {
     }
 
     public void forward() {
+        
+        Node n;
+
+        for (int i = 0; i < l.size(); i++) {
+            Log.info("setting value");
+            n = (Node) l.get(i);
+            n.calculateForward();
+        }
+        
     }
 
     public void backward() {
+        Log.info("to do - backward() in HiddenLayer");
     }
 
     public void update() {
+        Log.info("to do - update in HiddenLayer");
     }
 }

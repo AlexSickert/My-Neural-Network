@@ -17,9 +17,11 @@ public class OutputLayer extends Layer {
 
     public OutputLayer(int nodes, ArrayList nodeReference) {
 
+        Log.info("creating output layer");
+
         l = new ArrayList();
         for (int i = 0; i < nodes; i++) {
-            l.add(new Node(nodeReference));
+            l.add(new OutputNode(nodeReference));
         }
 
     }
@@ -29,12 +31,23 @@ public class OutputLayer extends Layer {
     }
 
     public void forward() {
+
+        OutputNode n;
+
+        for (int i = 0; i < l.size(); i++) {
+            Log.info("setting value");
+            n = (OutputNode) l.get(i);
+            n.calculateForward();
+        }
+
     }
 
     public void backward() {
+        Log.info("to do - backward() in OutputLayer");
     }
 
     public void update() {
+        Log.info("to do - update in OutputLayer");
     }
 
 }
